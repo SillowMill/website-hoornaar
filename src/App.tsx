@@ -65,31 +65,31 @@ const CONFIG = {
 
   // Certifications
   certifications: [
-    {"label": "Vlaams Erkend (2024030)", "icon": "award"},
-    {"label": "Gifvrije Methoden", "icon": "leaf"},
-    {"label": "7 Dagen Garantie", "icon": "filecheck"},
+    { "label": "Vlaams Erkend (2024030)", "icon": "award" },
+    { "label": "Gifvrije Methoden", "icon": "leaf" },
+    { "label": "7 Dagen Garantie", "icon": "filecheck" },
   ],
 
   // Services with pricing
   services: [
-    {"title": "Wespenverdelging", "desc": "Professionele verdelging van wespennesten met gespecialiseerde uitrusting en 7 dagen garantie.", "price": "Vanaf €50"},
-    {"title": "Aziatische Hoornaar", "desc": "Officieel erkend bestrijder van de Aziatische hoornaar door de Vlaamse overheid.", "price": "Vanaf €75"},
-    {"title": "Europese Hoornaar", "desc": "Veilige verwijdering van hoornaarnesten, ook op grote hoogte met cameragestuurde lans.", "price": "Vanaf €65"},
-    {"title": "Nesten op Hoogte", "desc": "Gespecialiseerd in nesten op grote hoogte met telescopische lansen en camera-monitoring.", "price": "Op aanvraag"},
-    {"title": "Preventief Advies", "desc": "Gratis advies over het voorkomen van wespen- en hoornaarnesten bij uw woning.", "price": "Gratis"},
-    {"title": "Spoedinterventie", "desc": "Snelle interventie binnen 24-72 uur bij urgente situaties.", "price": "Vanaf €60"},
+    { "title": "Wespenverdelging", "desc": "Professionele verdelging van wespennesten met gespecialiseerde uitrusting en 7 dagen garantie.", "price": "Vanaf €50" },
+    { "title": "Aziatische Hoornaar", "desc": "Officieel erkend bestrijder van de Aziatische hoornaar door de Vlaamse overheid.", "price": "Vanaf €75" },
+    { "title": "Europese Hoornaar", "desc": "Veilige verwijdering van hoornaarnesten, ook op grote hoogte met cameragestuurde lans.", "price": "Vanaf €65" },
+    { "title": "Nesten op Hoogte", "desc": "Gespecialiseerd in nesten op grote hoogte met telescopische lansen en camera-monitoring.", "price": "Op aanvraag" },
+    { "title": "Preventief Advies", "desc": "Gratis advies over het voorkomen van wespen- en hoornaarnesten bij uw woning.", "price": "Gratis" },
+    { "title": "Spoedinterventie", "desc": "Snelle interventie binnen 24-72 uur bij urgente situaties.", "price": "Vanaf €60" },
   ],
 
   // Testimonials
   testimonials: [
-    {"name": "Kris P.", "location": "Aarschot", "text": "Dorian is een absolute professional. Wespennest op 10 meter hoogte probleemloos verwijderd met zijn camearlans!"},
-    {"name": "Annelies S.", "location": "Scherpenheuvel", "text": "Heel geruststellend dat hij ook brandweerman is. Snel, veilig en vriendelijk. Absolute aanrader!"},
-    {"name": "Bart M.", "location": "Tielt-Winge", "text": "Aziatische hoornaar in de tuin! Dorian was er binnen een dag. Professioneel en betaalbaar."},
+    { "name": "Kris P.", "location": "Aarschot", "text": "Dorian is een absolute professional. Wespennest op 10 meter hoogte probleemloos verwijderd met zijn camearlans!" },
+    { "name": "Annelies S.", "location": "Scherpenheuvel", "text": "Heel geruststellend dat hij ook brandweerman is. Snel, veilig en vriendelijk. Absolute aanrader!" },
+    { "name": "Bart M.", "location": "Tielt-Winge", "text": "Aziatische hoornaar in de tuin! Dorian was er binnen een dag. Professioneel en betaalbaar." },
   ],
 
   // Service regions
   regions: [
-    {"region": "Hageland", "cities": ['Aarschot', 'Bekkevoort', 'Begijnendijk', 'Haacht', 'Heist-op-den-Berg', 'Herent', 'Herselt', 'Holsbeek', 'Hulshout', 'Keerbergen', 'Leuven', 'Lubbeek', 'Rotselaar', 'Scherpenheuvel-Zichem', 'Tielt-Winge', 'Tremelo']},
+    { "region": "Hageland", "cities": ['Aarschot', 'Bekkevoort', 'Begijnendijk', 'Haacht', 'Heist-op-den-Berg', 'Herent', 'Herselt', 'Holsbeek', 'Hulshout', 'Keerbergen', 'Leuven', 'Lubbeek', 'Rotselaar', 'Scherpenheuvel-Zichem', 'Tielt-Winge', 'Tremelo'] },
   ],
 
   // Social links
@@ -109,35 +109,15 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-white shadow-sm">
-      {/* Slim top bar with slogan + social icons */}
-      <div className="bg-brand-600 text-white py-1.5 px-4 md:px-24">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <span className="font-display text-xs md:text-sm font-medium tracking-wide opacity-90">
-            {CONFIG.tagline}
-          </span>
-          <div className="hidden md:flex items-center gap-3">
-            <a href={CONFIG.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:opacity-70 transition-opacity">
-              <Facebook size={14} />
-            </a>
-            <a href={CONFIG.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:opacity-70 transition-opacity">
-              <Instagram size={14} />
-            </a>
-            <a href={CONFIG.social.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:opacity-70 transition-opacity">
-              <Linkedin size={14} />
-            </a>
-          </div>
-        </div>
-      </div>
-
-      {/* Main navigation */}
-      <div className="py-4 px-4 md:px-24 border-b border-black/5">
+      {/* Main navigation — larger header */}
+      <div className="py-5 px-4 md:px-24 border-b border-black/5">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center gap-2">
             <img
               src={CONFIG.logoUrl}
               alt={CONFIG.logoAlt}
-              className={CONFIG.logoClassName}
+              className="h-10 md:h-14"
             />
           </div>
 
@@ -199,11 +179,11 @@ const Navbar = () => {
 
 const Hero = () => {
   return (
-    <header className="relative pt-36 pb-20 md:pt-52 md:pb-32 overflow-hidden">
+    <header className="relative pt-28 pb-20 md:pt-40 md:pb-32 overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/hero-bg.png"
-          alt="Professionele ongediertebestrijder aan het werk in beschermende kleding"
+          src="/images/dorian-beschermpak.jpg"
+          alt="Dorian Laenen in beschermend pak klaar voor wespenverdelging"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-brand-600/60" />
@@ -334,10 +314,10 @@ const AboutUs = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
         <div className="relative flex justify-center lg:justify-start">
           <motion.div initial={{ opacity: 0, rotateY: 60 }} whileInView={{ opacity: 1, rotateY: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="w-2/3 aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl relative z-10">
-            <img src="/images/about-1.png" alt="Ongediertebestrijder inspecteert een magazijn op ongedierte" className="w-full h-full object-cover" />
+            <img src="/images/primair-nest.jpg" alt="Primair nest van de Aziatische hoornaar" className="w-full h-full object-cover" />
           </motion.div>
           <motion.div initial={{ opacity: 0, rotateY: -60 }} whileInView={{ opacity: 1, rotateY: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.2 }} className="w-2/3 aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl absolute -bottom-10 -right-4 lg:-right-10 z-0 border-8 border-white">
-            <img src="/images/about-2.png" alt="Technicus plaatst professioneel lokstation langs een muur" className="w-full h-full object-cover" />
+            <img src="/images/secundair-nest.jpg" alt="Groot secundair nest van Aziatische hoornaar in een boom" className="w-full h-full object-cover" />
           </motion.div>
         </div>
 
@@ -394,7 +374,7 @@ const Services = () => {
   return (
     <section id="diensten" className="py-24 relative overflow-hidden bg-zinc-900">
       <div className="absolute inset-0 opacity-20">
-        <img src="/images/specialist.png" alt="" role="presentation" className="w-full h-full object-cover grayscale" />
+        <img src="/images/telescopische-lans.jpg" alt="" role="presentation" className="w-full h-full object-cover grayscale" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-24 text-center">
@@ -467,7 +447,7 @@ const WhyChooseUs = () => {
 
         <div className="relative flex justify-center">
           <motion.div initial={{ opacity: 0, rotateY: -60 }} whileInView={{ opacity: 1, rotateY: 0 }} viewport={{ once: true }} className="w-4/5 aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl">
-            <img src="/images/specialist.png" alt="Gecertificeerde specialist past ongediertebestrijding toe in een kantoor" className="w-full h-full object-cover" />
+            <img src="/images/europese-hoornaar.jpg" alt="Europese hoornaar in nestkastje" className="w-full h-full object-cover" />
           </motion.div>
           <motion.div initial={{ opacity: 0, scale: 0.5 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className="absolute -bottom-10 -left-4 md:-left-10 bg-white p-8 rounded-3xl shadow-2xl border border-black/5 max-w-[280px]">
             <div className="flex items-center gap-4 mb-4">
@@ -608,7 +588,7 @@ const Contact = () => (
         </div>
 
         <div className="relative aspect-video rounded-3xl overflow-hidden shadow-2xl">
-          <img src="/images/team.png" alt="Professioneel team bespreekt een ongediertebestrijdingsplan" className="w-full h-full object-cover" />
+          <img src="/images/camera-lans.jpg" alt="Camera-systeem op telescopische lans voor inspectie op hoogte" className="w-full h-full object-cover" />
           <div className="absolute bottom-4 left-4 right-4 bg-white p-6 rounded-2xl flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-zinc-900 font-display font-bold text-lg">Direct iemand spreken?</p>
             <a href={CONFIG.phoneLink} className="bg-brand-500 text-white px-6 py-3 rounded-full font-display font-bold hover:bg-brand-600 transition-all cursor-pointer inline-block">{CONFIG.phone}</a>
