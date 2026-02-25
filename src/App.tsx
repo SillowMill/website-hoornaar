@@ -186,7 +186,8 @@ const Hero = () => {
           alt="Dorian Laenen in beschermend pak klaar voor wespenverdelging"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-brand-600/60" />
+        {/* Brand gradient overlay — 70-85% opacity for consistent readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-600/90 via-brand-600/80 to-brand-500/70" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-24">
@@ -195,7 +196,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 bg-brand-500/20 border border-brand-500/40 text-brand-50 px-4 py-2 rounded-full mb-6 backdrop-blur-sm"
+            className="inline-flex items-center gap-2 bg-white/10 border border-white/25 text-white px-4 py-2 rounded-full mb-6 backdrop-blur-sm"
           >
             <Clock size={16} />
             <span className="font-display font-semibold text-sm">Interventie binnen 24 uur — 7 dagen per week</span>
@@ -212,7 +213,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-brand-50 text-lg md:text-xl mb-10 leading-relaxed"
+            className="text-white text-lg md:text-xl mb-10 leading-relaxed"
           >
             Heeft u last van ongewenste dieren en insecten? Bij {CONFIG.name} zijn we gespecialiseerd in wering en bestrijding van ongedierte over {CONFIG.region}. Snel, discreet en met garantie.
           </motion.p>
