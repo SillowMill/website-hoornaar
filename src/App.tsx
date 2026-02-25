@@ -184,7 +184,7 @@ const Hero = () => {
         <img
           src="/images/dorian-beschermpak.jpg"
           alt="Dorian Laenen in beschermend pak klaar voor wespenverdelging"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover blur-sm scale-105"
         />
         {/* Brand gradient overlay — 70-85% opacity for consistent readability */}
         <div className="absolute inset-0 bg-gradient-to-br from-brand-600/90 via-brand-600/80 to-brand-500/70" />
